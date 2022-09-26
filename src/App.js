@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Contact data={contacts} />
+      <Contact contacts={contacts} />
     </div>
   );
 };

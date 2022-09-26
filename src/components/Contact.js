@@ -9,24 +9,24 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = ({ data }) => {
+const Contact = ({ contacts }) => {
     // Contact berisi foto, nama, telepon, dan email
     return (
         <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
             {
-               data.map((datum, index) => {
+               contacts.map((contact, index) => {
                     return (
                         <ListItem key={index}>
                             <ListItemAvatar>
                                 <Avatar>
-                                    <img src={datum.photo} alt={datum.photo}/>
+                                    <img src={contact.photo} alt={contact.photo}/>
                                 </Avatar>
 
                             </ListItemAvatar>
-                            <ListItemText primary={datum.name} secondary={
+                            <ListItemText primary={contact.name} secondary={
                                 <div>
-                                    <div>{datum.phone}</div>
-                                    <div>{datum.email}</div>
+                                    <div>{contact.phone}</div>
+                                    <div>{contact.email}</div>
                                 </div>
                             }/>
                         </ListItem>
