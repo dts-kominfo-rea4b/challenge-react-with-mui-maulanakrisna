@@ -19,8 +19,8 @@ const Contact = async ({ data }) => {
                     return (
                         <ListItem key={index}>
                             <ListItemAvatar>
-                                <Avatar>
-                                    <img src={contact.photo} alt={contact.photo}/>
+                                <Avatar src={contact.photo}>
+                                    
                                 </Avatar>
 
                             </ListItemAvatar>
