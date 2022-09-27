@@ -5,27 +5,23 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
-const Contact = ({ data }) => {
+const Contact = ({key, data }) => {
  
     return (
         <div>
         <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-            
-            {data.map((contact, index) => {
-                return (
-                    <ListItem key={index}>
-                        <ListItemAvatar>
-                            <Avatar src={contact.photo}>                                   
-                            </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText primary={contact.name} secondary={                                <div>
-                                    <div>{contact.phone}</div>
-                                    <div>{contact.email}</div>
-                                </div>
-                            }/>
-                    </ListItem>
-                );
-            })}
+            <ListItem key={key}>
+                <ListItemAvatar>
+                    <Avatar src={data.photo}>                                   
+                    </Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={data.name} secondary={
+                    <div>
+                        <div>{data.phone}</div>
+                        <div>{data.email}</div>
+                    </div>
+                }/>
+                </ListItem>
         </List>
         </div>
     );

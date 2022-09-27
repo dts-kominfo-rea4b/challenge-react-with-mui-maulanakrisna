@@ -21,7 +21,7 @@ const App = () => {
     <div className="App">
       <Header />
       <ContactForm clickHandler={submitHandler}/>
-      <Contact data={inputedContacts} />
+      {inputedContacts.map((contact, i) => <Contact key={i} data={contact} />)}
     </div>
   );
 };
