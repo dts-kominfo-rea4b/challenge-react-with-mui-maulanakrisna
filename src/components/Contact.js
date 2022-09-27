@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 // atau langsung tambahkan dengan sx={{}}
 const Contact = async ({ data }) => {
     // Contact berisi foto, nama, telepon, dan email
+    try{
     return (
         <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
             {
@@ -37,6 +38,9 @@ const Contact = async ({ data }) => {
             }
         </List>
     );
+        }catch(e){
+            alert(e);
+        }
     
 };
 
