@@ -39,7 +39,7 @@ const Contact = async ({ data }) => {
         </List>
     );
         }catch(e){
-            alert(e);
+          
         }
     
 };
