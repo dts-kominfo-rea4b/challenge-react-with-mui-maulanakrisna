@@ -6,16 +6,22 @@ import Contact from './components/Contact';
 
 import contactsJSON from './data/contacts.json';
 import { useState } from 'react';
+import ContactForm from './components/ContactForm';
 
 const App = () => {
 
-  // const [contacts, setContacs] = useState([]);
-  const data = [...contactsJSON];
+  const [contacts, setContacts] = useState([]);
+ 
+  const submitHandler = (contact) =>{
+    setContacts([...contacts, {name: contact.name, email: contact.email, phone: contact.phone, photo: contact.photo}]);
+  }
 
   return (
     <div className="App">
       <Header />
-      <Contact data={data} />
+      <ContactForm clickHandler={submitHandler}/>
+      <Contact contacts={contacts} />
+      <Contact contacts={contactsJSON} />
     </div>
   );
 };
