@@ -5,12 +5,13 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
-const Contact = ({ contacts }) => {
+const Contact = ({ data }) => {
  
     return (
         <div>
         <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-            {contacts.map((contact, index) => {
+            
+            {data.map((contact, index) => {
                 return (
                     <ListItem key={index}>
                         <ListItemAvatar>

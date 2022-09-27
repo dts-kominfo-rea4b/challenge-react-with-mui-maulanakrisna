@@ -10,18 +10,18 @@ import ContactForm from './components/ContactForm';
 
 const App = () => {
 
-  const [contacts, setContacts] = useState([]);
+  // const contacts = [...contactsJSON];
+  const [inputedContacts, setInputedContacts] = useState([...contactsJSON]);
  
   const submitHandler = (contact) =>{
-    setContacts([...contacts, {name: contact.name, email: contact.email, phone: contact.phone, photo: contact.photo}]);
+    setInputedContacts([...inputedContacts, {name: contact.name, email: contact.email, phone: contact.phone, photo: contact.photo}]);
   }
 
   return (
     <div className="App">
       <Header />
       <ContactForm clickHandler={submitHandler}/>
-      <Contact contacts={contacts} />
-      <Contact contacts={contactsJSON} />
+      <Contact data={inputedContacts} />
     </div>
   );
 };
