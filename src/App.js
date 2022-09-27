@@ -10,12 +10,12 @@ import { useState } from 'react';
 const App = () => {
 
   // const [contacts, setContacs] = useState([]);
-  const contacts = contactsJSON;
+  const data = [...contactsJSON];
 
   return (
     <div className="App">
       <Header />
-      <Contact data={contacts} />
+      <Contact data={data} />
     </div>
   );
 };
