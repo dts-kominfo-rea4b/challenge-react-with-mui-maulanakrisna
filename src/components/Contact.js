@@ -9,9 +9,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = async ({ data }) => {
+const Contact = ({ data }) => {
     // Contact berisi foto, nama, telepon, dan email
-    try{
     return (
         <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
             {
@@ -38,9 +37,6 @@ const Contact = async ({ data }) => {
             }
         </List>
     );
-        }catch(e){
-          
-        }
     
 };
 
